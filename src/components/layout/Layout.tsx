@@ -1,4 +1,4 @@
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, Link } from "react-router-dom";
 
 function Layout() {
   const location = useLocation();
@@ -15,40 +15,40 @@ function Layout() {
           </div>
           <ul className="hidden md:flex flex-1 min-w-0 justify-end items-center gap-4">
             <li>
-              <a
+              <Link
                 className="text-foreground font-normal data-[active=true]:text-primary hover:text-primary/70"
-                href="/"
+                to="/"
                 data-active={location.pathname === "/"}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className="text-foreground font-normal data-[active=true]:text-primary hover:text-primary/70"
-                href="products"
+                to="products"
                 data-active={location.pathname === "/products"}
               >
                 Product
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className="text-foreground font-normal data-[active=true]:text-primary hover:text-primary/70"
-                href="about"
+                to="about"
                 data-active={location.pathname === "/about"}
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className="text-foreground font-normal data-[active=true]:text-primary hover:text-primary/70"
-                href="contacts"
+                to="contacts"
                 data-active={location.pathname === "/contacts"}
               >
                 Contacts
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="grow md:hidden"></div>

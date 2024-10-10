@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ShoppingBagIcon } from "@heroicons/react/24/solid";
 import healthyicon from "../assets/images/healthy.png";
+import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
@@ -17,14 +18,14 @@ function HeroSection() {
               guna meningkatkan kualitas hidup anda
             </p>
             <div className="flex flex-col items-center gap-3 sm:flex-row">
-              <a href="/products">
+              <Link to="/products">
                 <Button size="lg">
                   <div className="flex items-center justify-center gap-1">
                     <ShoppingBagIcon className="size-6 pb-1" />
                     Lihat Produk
                   </div>
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
 
