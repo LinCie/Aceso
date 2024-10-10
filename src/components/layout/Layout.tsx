@@ -1,4 +1,5 @@
 import { Outlet, useLocation, Link } from "react-router-dom";
+import aceso from "@/assets/images/aceso.png";
 
 function Layout() {
   const location = useLocation();
@@ -6,17 +7,17 @@ function Layout() {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-[100] bg-background/70 px-3 py-2 text-foreground backdrop-blur md:px-2 md:py-1">
-        <div className="max-w-screen-xl mx-auto px-4 flex items-center h-16">
+        <div className="mx-auto flex h-16 max-w-screen-xl items-center px-4">
           <div>
-            <div className="select-none flex items-center">
-              <div className="mr-2"></div>
-              <div className="text-xl">Aceso</div>
+            <div className="flex select-none items-center justify-center gap-1">
+              <img src={aceso} className="size-10" />
+              <div className="font-semibold text-primary">ACESO</div>
             </div>
           </div>
-          <ul className="hidden md:flex flex-1 min-w-0 justify-end items-center gap-4">
+          <ul className="hidden min-w-0 flex-1 items-center justify-end gap-4 md:flex">
             <li>
               <Link
-                className="text-foreground font-normal data-[active=true]:text-primary hover:text-primary/70"
+                className="font-normal text-foreground hover:text-primary/70 data-[active=true]:text-primary"
                 to="/"
                 data-active={location.pathname === "/"}
               >
@@ -25,7 +26,7 @@ function Layout() {
             </li>
             <li>
               <Link
-                className="text-foreground font-normal data-[active=true]:text-primary hover:text-primary/70"
+                className="font-normal text-foreground hover:text-primary/70 data-[active=true]:text-primary"
                 to="products"
                 data-active={location.pathname === "/products"}
               >
@@ -34,7 +35,7 @@ function Layout() {
             </li>
             <li>
               <Link
-                className="text-foreground font-normal data-[active=true]:text-primary hover:text-primary/70"
+                className="font-normal text-foreground hover:text-primary/70 data-[active=true]:text-primary"
                 to="about"
                 data-active={location.pathname === "/about"}
               >
@@ -43,7 +44,7 @@ function Layout() {
             </li>
             <li>
               <Link
-                className="text-foreground font-normal data-[active=true]:text-primary hover:text-primary/70"
+                className="font-normal text-foreground hover:text-primary/70 data-[active=true]:text-primary"
                 to="contacts"
                 data-active={location.pathname === "/contacts"}
               >
