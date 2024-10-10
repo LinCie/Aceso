@@ -1,9 +1,7 @@
-import { Outlet, useLocation, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import aceso from "@/assets/images/aceso.png";
 
 function Layout() {
-  const location = useLocation();
-
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-[100] bg-background/70 text-foreground backdrop-blur">
@@ -16,40 +14,36 @@ function Layout() {
           </div>
           <ul className="hidden min-w-0 flex-1 items-center justify-end gap-4 text-sm md:flex">
             <li>
-              <Link
-                className="font-normal text-foreground hover:text-primary/70 data-[active=true]:text-primary"
-                to="/"
-                data-active={location.pathname === "/"}
+              <a
+                className="font-normal text-foreground hover:text-primary/70"
+                href="#hero-section"
               >
                 Home
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                className="font-normal text-foreground hover:text-primary/70 data-[active=true]:text-primary"
-                to="products"
-                data-active={location.pathname === "/products"}
+              <a
+                className="font-normal text-foreground hover:text-primary/70"
+                href="#product-section"
               >
-                Product
-              </Link>
+                Products
+              </a>
             </li>
             <li>
-              <Link
-                className="font-normal text-foreground hover:text-primary/70 data-[active=true]:text-primary"
-                to="about"
-                data-active={location.pathname === "/about"}
+              <a
+                className="font-normal text-foreground hover:text-primary/70"
+                href="#about-section"
               >
                 About
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                className="font-normal text-foreground hover:text-primary/70 data-[active=true]:text-primary"
-                to="contacts"
-                data-active={location.pathname === "/contacts"}
+              <a
+                className="font-normal text-foreground hover:text-primary/70"
+                href="#contact-section"
               >
                 Contacts
-              </Link>
+              </a>
             </li>
           </ul>
           <div className="grow md:hidden"></div>

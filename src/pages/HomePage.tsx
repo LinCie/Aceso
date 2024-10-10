@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
-    <section className="flex h-auto min-h-screen items-center justify-center bg-white px-4 md:px-8">
+    <section
+      id="hero-section"
+      className="flex h-auto min-h-screen items-center justify-center bg-white px-4 md:px-8"
+    >
       <div className="relative w-full max-w-screen-xl before:pointer-events-none before:absolute before:left-0 before:top-0 before:h-40 before:w-full before:max-w-md before:-translate-x-1/4 before:translate-y-1/2 before:bg-gradient-to-br before:from-primary/50 before:to-secondary/50 before:blur-[100px] after:pointer-events-none after:absolute after:left-0 after:top-0 after:h-20 after:w-full after:max-w-md after:translate-y-1/2 after:bg-gradient-to-br after:from-primary/30 after:to-secondary/30 after:blur-[100px] md:after:translate-x-1/2">
         <div className="relative z-10 flex w-full flex-col items-center gap-8 md:flex-row">
           {/* Left content (Text) */}
@@ -50,6 +53,7 @@ function HomePage() {
   return (
     <>
       <HeroSection />
+      <div className="h-screen"></div>
     </>
   );
 }
