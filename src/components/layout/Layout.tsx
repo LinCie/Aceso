@@ -6,15 +6,15 @@ function Layout() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-[100] bg-background/70 px-3 py-2 text-foreground backdrop-blur md:px-2 md:py-1">
-        <div className="mx-auto flex h-16 max-w-screen-xl items-center px-4">
+      <header className="fixed inset-x-0 top-0 z-[100] bg-background/70 text-foreground backdrop-blur">
+        <div className="mx-auto flex max-w-screen-2xl items-center px-2 py-1 md:px-4 md:py-2">
           <div>
             <div className="flex select-none items-center justify-center gap-1">
               <img src={aceso} className="size-10" />
-              <div className="font-semibold text-primary">ACESO</div>
+              <div className="font-medium text-primary">ACESO</div>
             </div>
           </div>
-          <ul className="hidden min-w-0 flex-1 items-center justify-end gap-4 md:flex">
+          <ul className="hidden min-w-0 flex-1 items-center justify-end gap-4 text-sm md:flex">
             <li>
               <Link
                 className="font-normal text-foreground hover:text-primary/70 data-[active=true]:text-primary"
