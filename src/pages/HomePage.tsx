@@ -17,19 +17,27 @@ function HeroSection() {
               guna meningkatkan kualitas hidup anda
             </p>
             <div className="flex flex-col items-center gap-3 sm:flex-row">
-              <Button size="lg">
-                <div className="flex items-center justify-center gap-1">
-                  <ShoppingBagIcon className="size-6 pb-1" />
-                  Lihat Produk
-                </div>
-              </Button>
+              <a href="/products">
+                <Button size="lg">
+                  <div className="flex items-center justify-center gap-1">
+                    <ShoppingBagIcon className="size-6 pb-1" />
+                    Lihat Produk
+                  </div>
+                </Button>
+              </a>
             </div>
           </div>
 
           {/* Right content (Image) */}
-          <div className="flex w-full flex-1 items-center justify-center flex-col gap-2">
+          <div className="flex w-full flex-1 flex-col items-center justify-center gap-2">
             <img src={healthyicon} className="size-52 md:size-96" />
-            <a href="https://www.flaticon.com/free-icons/vegan" title="vegan icons" className="text-sm text-primary/85">Vegan icons created by Smashicons - Flaticon</a>
+            <a
+              href="https://www.flaticon.com/free-icons/vegan"
+              title="vegan icons"
+              className="text-sm text-primary/85"
+            >
+              Vegan icons created by Smashicons - Flaticon
+            </a>
           </div>
         </div>
       </div>
