@@ -118,17 +118,32 @@ function Layout() {
             <ul className="flex min-w-0 flex-1 items-center justify-center gap-2">
               <li>
                 <a href="https://react.dev/" target="_blank">
-                  <img src={react} alt="React" className="size-6" />
+                  <img
+                    src={react}
+                    alt="React"
+                    className="size-6"
+                    loading="lazy"
+                  />
                 </a>
               </li>
               <li>
                 <a href="https://vite.dev/" target="_blank">
-                  <img src={vite} alt="Vite" className="size-6" />
+                  <img
+                    src={vite}
+                    alt="Vite"
+                    className="size-6"
+                    loading="lazy"
+                  />
                 </a>
               </li>
               <li>
                 <a href="https://tailwindcss.com/" target="_blank">
-                  <img src={tailwind} alt="Tailwind" className="size-6" />
+                  <img
+                    src={tailwind}
+                    alt="Tailwind"
+                    className="size-6"
+                    loading="lazy"
+                  />
                 </a>
               </li>
             </ul>
@@ -138,7 +153,12 @@ function Layout() {
           </div>
           <div>
             <a href="https://github.com/LinCie/Aceso" target="_blank">
-              <img src={github} alt="Github" className="size-6" />
+              <img
+                src={github}
+                alt="Github"
+                className="size-6"
+                loading="lazy"
+              />
             </a>
           </div>
         </div>
