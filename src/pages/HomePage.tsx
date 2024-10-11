@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import {
   ShoppingBagIcon,
   GlobeAsiaAustraliaIcon,
+  ArrowRightIcon,
 } from "@heroicons/react/24/solid";
 import healthyicon from "../assets/images/healthy.png";
 
@@ -189,11 +190,79 @@ function FeatureSection() {
   );
 }
 
+interface IProductData {
+  name: string;
+  image: string;
+  link: string;
+  description: string;
+}
+
+function ProductCard({ product }: { product: IProductData }) {
+  return (
+    <a
+      href={product.link}
+      className="group relative flex h-[40rem] w-10/12 flex-col overflow-hidden rounded-2xl bg-muted sm:w-6/12 md:w-5/12 lg:w-4/12 2xl:w-3/12"
+    >
+      <div className="h-96 w-full overflow-hidden">
+        <img
+          src={product.image}
+          alt={product.name}
+          loading="lazy"
+          className="h-full w-full object-cover"
+        />
+      </div>
+      <div className="relative flex flex-1 flex-col items-start justify-center px-6">
+        <h3 className="py-4 text-xl font-semibold capitalize text-primary">
+          {product.name}
+        </h3>
+        <p className="flex-1">{product.description}</p>
+      </div>
+      <div className="absolute bottom-2 right-2 flex items-center gap-1 text-primary opacity-0 transition-opacity duration-200 hover:underline group-hover:opacity-100">
+        Lihat produk
+        <ArrowRightIcon className="size-3" />
+      </div>
+    </a>
+  );
+}
+
+function ProductSection() {
+  const products: IProductData[] = [
+    {
+      name: "Protevit",
+      image: "https://i.ibb.co.com/rG4wYLY/hero.jpg",
+      link: "test",
+      description:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed saepe dolorem tempore maiores quos perspiciatis dolor facere, deleniti, officia sapiente rerum voluptate non nam tempora itaque. Iusto eligendi corrupti velit?",
+    },
+    {
+      name: "AlbuMed",
+      image: "https://i.ibb.co.com/rG4wYLY/hero.jpg",
+      link: "test",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas saepe repudiandae ipsum repellat rem culpa illo ea ullam iure est exercitationem laboriosam, debitis tempore hic voluptate iusto facilis officiis consectetur.",
+    },
+  ];
+
+  return (
+    <section id="product-section" className="bg-background py-8 sm:py-16">
+      <h2 className="mb-8 text-center text-4xl font-bold leading-[3.25rem] text-primary md:mb-12">
+        Produk Kami
+      </h2>
+      <div className="mx-auto flex w-full flex-wrap justify-center gap-6 sm:gap-10 md:max-w-screen-lg lg:max-w-screen-xl">
+        {products.map((product) => (
+          <ProductCard key={product.name} product={product} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function HomePage() {
   return (
     <>
       <HeroSection />
       <FeatureSection />
+      <ProductSection />
     </>
   );
 }
